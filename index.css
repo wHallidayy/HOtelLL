@@ -1,0 +1,440 @@
+:root {
+    --light-gray: #D3D3D3;
+    --cream-pink: #FAE8E0;
+    --white: #FFFFFF;
+    --dark-gray: #333333;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 50rem;
+    font-family: 'Mitr', sans-serif;
+    background-color: var(--light-gray);
+    color: var(--dark-gray);
+    z-index: -10;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://images.unsplash.com/photo-1684434037158-ceb3dc936731?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 4rem;
+    font-weight: bold;
+    color: var(--cream-pink);
+    margin-bottom: 20px;
+    transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.logo-icon {
+    width: 60px;
+    height: 60px;
+    background-color: var(--cream-pink);
+    border-radius: 50%;
+    margin-right: 20px;
+    transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.Hotel-Title {
+    font-family: 'Glitten', sans-serif;
+    font-weight: 800;
+    letter-spacing: 0.3rem;
+    font-style: normal;
+    font-size: 6rem;
+    text-shadow: 0 0 3px var(--white);
+}
+
+.nav-wrapper {
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+
+.navbar-toggle {
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 400ms;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;  
+    position: fixed;
+    z-index: 20;
+    right: 1rem;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+}
+
+.navbar-toggle .line {
+    fill: none;
+    transition: stroke 400ms, stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    stroke: #000;
+    stroke-width: 5.5;
+    stroke-linecap: round;
+}
+
+.navbar-toggle .line.top {
+    stroke-dasharray: 40 139;
+}
+
+.navbar-toggle .line.bottom {
+    stroke-dasharray: 20 180;
+    stroke-dashoffset: -20px;
+}
+
+.navbar-toggle.active {
+    transform: rotate(45deg);
+}
+
+.navbar-toggle.active .line {
+    stroke: #FFFFFF;
+}
+
+.navbar-toggle.active .line.top {
+    stroke-dashoffset: -98px;
+}
+
+.navbar-toggle.active .line.bottom {
+    stroke-dashoffset: -138px;
+}
+
+.navbar-toggle:not(.active):hover .line.bottom {
+    stroke-dasharray: 40 180;
+    stroke-dashoffset: 0px;
+}
+
+.navbar-toggle.active .line {
+    stroke: var(--dark-gray);
+}
+
+.full-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(211, 211, 211, 0.95);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+}
+
+.full-menu.active {
+    display: flex;
+}
+
+.full-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.full-menu ul li {
+    margin: 20px 0;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.full-menu a {
+    color: var(--dark-gray);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.full-menu a:hover {
+    color: var(--cream-pink);
+    transform: scale(1.1);
+}
+
+.footer {
+    background-color: var(--light-gray);
+    padding: 4rem 2rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section.full-width {
+    grid-column: 1 / -1;
+    font-size: 1rem;
+    line-height: 1.5;
+    background-color: var(--light-gray);
+    padding: 2rem;
+}
+
+.footer-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--dark-gray);
+    font-weight: 600;
+}
+
+.footer-section p, .footer-section ul {
+    font-size: 0.9rem;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-section ul {
+    list-style-type: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+    color: var(--dark-gray);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: var(--cream-pink);
+}
+
+.map-container {
+    width: 100%;
+    height: 200px;
+    margin-top: 1rem;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+.policies {
+    background-color: var(--dark-gray);
+    padding: 1rem 2rem;
+    font-size: 0.8rem;
+    text-align: center;
+    color: var(--white);
+}
+
+.policies a {
+    color: var(--cream-pink);
+    transition: color 0.3s ease;
+}
+
+.policies a:hover {
+    color: var(--light-gray);
+}
+
+.svg-icon {
+    fill: var(--cream-pink);
+}
+
+/* Hero Section Styles */
+.hero {
+    padding-top: 80px;
+    background-color: var(--cream-pink);
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content a {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    color: var(--cream-pink);
+    text-align: right;
+    max-width: 400px;
+    background: rgba(213, 190, 190, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    font-family: 'Mitr', sans-serif;
+}
+
+.hero-content p {
+    font-size: 24px;
+    margin: 0 0 10px;
+}
+
+
+/* Room Section Styles */
+.section {
+    padding: 100px 0;
+    background-color: var(--white);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 60px;
+    color: var(--dark-gray);
+}
+
+.rooms-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.room-card {
+    background-color: var(--light-gray);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.room-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.room-image {
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+}
+
+.room-info {
+    padding: 30px;
+}
+
+.room-info h3 {
+    margin-bottom: 15px;
+    color: var(--dark-gray);
+    font-size: 24px;
+}
+
+.room-info p {
+    color: var(--dark-gray);
+    line-height: 1.6;
+}
+
+.book-button {
+    background-color: var(--dark-gray);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.book-button:hover {
+    background-color: var(--cream-pink);
+}
+
+.hero {
+    padding-top: 80px;
+    background-color: var(--cream);
+}
+
+.hero .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero .flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 0;
+}
+
+.hero .flex-container video {
+    max-width: 50%;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.hero .text-content {
+    max-width: 45%;
+}
+
+.hero .text-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: var(--dark-gray);
+}
+
+.hero .text-content p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.hero .cta-button {
+    display: inline-block;
+    background-color: var(--dark-gray);
+    color: var(--cream);
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero .cta-button:hover {
+    background-color: var(--accent-color);
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .hero .flex-container {
+        flex-direction: column;
+    }
+
+    .hero .flex-container video,
+    .hero .text-content {
+        max-width: 100%;
+    }
+
+    .hero .text-content {
+        margin-top: 40px;
+    }
+}

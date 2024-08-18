@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alluring Hotel</title>
+    <link rel=" stylesheet" href="index.css" >
+    <link href="https://fonts.cdnfonts.com/css/glitten" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <div class="logo-icon"></div>
+            <div class="Hotel-Title">
+                Alluring Hotel
+            </div>
+        </div>
+        <div class="nav-wrapper">
+            <button class="navbar-toggle" id="toggle" type="button">
+                <svg viewBox="0 0 100 100" width="80">
+                    <path class="line top" d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40" />
+                    <path class="line middle" d="m 30,50 h 40" />
+                    <path class="line bottom" d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <nav class="full-menu">
+        <ul>
+            <li><a data-text="1" href="./index.html">Home</a></li>
+            <li><a data-text="2" href="#">Facilities</a></li>
+            <li><a data-text="3" href="#">Gallery</a></li>
+            <li><a data-text="4" href="#">Contact</a></li>
+            <li><a data-text="5" href="#">Book Now</a></li>
+        </ul>
+    </nav>
+
+    <div id="bg-circle"></div>
+
+    <section id="home" class="hero" style="padding-top: 18rem;">
+        <div class="container">
+            <div class="flex-container">
+                <video autoplay loop muted width="500">
+                    <source src="./assets/Hilton. For The Stay. - Digital Check In - Shining Gold.mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="text-content">
+                    <h1>Welcome to Alluring Hotel</h1>
+                    <p>
+                        ชายหาดที่เงียบสงบและเป็นส่วนตัว สถานที่พักผ่อนที่ดีที่สุด เต็มไปด้วยความสุข
+                        เงียบสงบและเป็นส่วนตัว
+                        อยู่บนชายหาดสีขาวสะอาด และด้วยทำเลที่กลางภูเก็ตที่สวยงามที่สุดแห่งหนึ่ง Alluring Hotel
+                        ตั้งอยู่ริมชายหาดที่ดีที่สุดของเมือง มีห้องพักที่ได้รับความตกแต่งแบบมีความสะดวกสบาย
+                        เหมาะสำหรับการพักผ่อนแสนโรแมนติกและการพักผ่อนกับครอบครัว
+                    </p>
+                    <a href="#book-now" class="cta-button">Book Your Stay</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="rooms" class="section" ">
+        <div class="container" style="padding: 1rem 6rem;">
+            <h2 class="section-title">Our Rooms</h2>
+            <div class="rooms-grid">
+                <div class="room-card">
+                    <div class="room-image" style="background-image: url(./assets/ดีลักซ์-20240818T044647Z-001/ดีลักซ์/1M9A7463.webp);"></div>
+                    <div class="room-info">
+                        <h3>Deluxe Room</h3>
+                        <p>Luxurious comfort with ocean views</p>
+                        <button class="book-button">จองห้อง</button>
+                    </div>
+                </div>
+                <div class="room-card">
+                    <div class="room-image" style="background-image: url(./assets/สวีท-20240818T044653Z-001/สวีท/1M9A7559-1.webp);"></div>
+                    <div class="room-info">
+                        <h3>Sweet</h3>
+                        <p>Spacious and elegant accommodation</p>
+                        <button class="book-button">จองห้อง</button>
+                    </div>
+                </div>
+                <div class="room-card">
+                    <div class="room-image" style="background-image: url(./assets/วิลล่า-20240818T044650Z-001/วิลล่า/2-Bedroom-Sky-Pool-Villa-6.webp);"></div>
+                    <div class="room-info">
+                        <h3>Pool Villa</h3>
+                        <p>Comfort with all modern amenities</p>
+                        <button class="book-button">จองห้อง</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="hero">
+        <div class="hero-slider">
+            <div class="slide active" style="background-image: url(./assets/สภาพแวดล้อม-20240818T044651Z-001/สภาพแวดล้อม/1M9A8899-edit-1920x1280.webp);"></div>
+            <div class="slide" style="background-image: url(./assets/สภาพแวดล้อม-20240818T044651Z-001/สภาพแวดล้อม/9051013-1024x683.webp);"></div>
+            <div class="slide" style="background-image: url(./assets/สภาพแวดล้อม-20240818T044651Z-001/สภาพแวดล้อม/dining-veranda-huahin-06-1024x687.webp);"></div>
+        </div>
+        <div class="hero-content">
+            <a href="#book" class="btn">Book now</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>ที่ตั้ง</h3>
+                <p>423 ตำบลชะอำ อำเภอชะอำ<br>จังหวัดเพชรบุรี 76120</p>
+                <div class="map-container">
+                    <div id="map"></div>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>ติดต่อเรา</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>นโยบายโรงแรม</h3>
+                <ul>
+                    <li>เช็คอิน: 14:00 น.</li>
+                    <li>เช็คเอาท์: 12:00 น.</li>
+                    <li>ไม่อนุญาตให้นำสัตว์เลี้ยงเข้าพัก</li>
+                    <li>ห้ามสูบบุหรี่ภายในโรงแรม</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>นโยบายเด็ก</h3>
+                <ul>
+                    <li>0-4 ปี: พักฟรี (เตียงเดียวกับผู้ปกครอง)</li>
+                    <li>5-11 ปี: ค่าอาหารเช้า 460 บาท/วัน</li>
+                    <li>เตียงเสริม: 1,500 บาท/คืน (รวมอาหารเช้า)</li>
+                    <li>เตียงเด็ก (&lt;2 ปี): ฟรี (ต้องแจ้งล่วงหน้า)</li>
+                </ul>
+            </div>
+            <div class="footer-section full-width">
+                <h3>ข้อกำหนดและเงื่อนไขทั่วไป</h3>
+                <p>
+                    การชำระเงินมัดจำล่วงหน้าจะถูกเรียกเก็บในขณะทำการจอง
+                    การจองทั้งหมดต้องได้รับการรับประกันด้วยบัตรเครดิตที่ถูกต้อง
+                    เราขอสงวนสิทธิ์ในการยกเลิกหรือแก้ไขการจองหากปรากฏว่าแขกได้มีส่วนร่วมในกิจกรรมที่ฉ้อโกงหรือไม่เหมาะสมหรือภายใต้สถานการณ์อื่น ๆ ที่ปรากฏว่าการจองมีหรือเป็นผลมาจากข้อผิดพลาดหรือข้อผิดพลาด
+                    การแก้ไขหรือการยกเลิกจะต้องแจ้งเป็นลายลักษณ์อักษรไปยังอีเมลหรือแบบฟอร์มติดต่อที่ให้ไว้ในเว็บไซต์
+                    อัตราดอกเบี้ยจะคิดตามสกุลเงินบาทไทย ดังนั้น จำนวนเงินที่แสดงในใบแจ้งยอดรายเดือนในสกุลเงินอื่นที่บริษัทบัตรเครดิตส่งให้คุณอาจแตกต่างจากราคาที่เราเสนอเล็กน้อยเนื่องจากอัตราแลกเปลี่ยนที่มีการเปลี่ยนแปลง
+                    นโยบายเด็ก:
+                    เด็กอายุ 0 - 4 ปี พักเตียงเดียวกับผู้ปกครองไม่เสียค่าใช้จ่าย
+                    เด็กอายุ 5 - 11 ปี พักเตียงเดียวกับผู้ปกครอง ต้องชำระค่าอาหารเช้า 460 บาทสุทธิต่อเด็กต่อวัน
+                    เตียงเสริม – สามารถขอเตียงเสริมได้สูงสุด 1 เตียงต่อห้อง โดยคิดค่าเตียงเสริม 1,500 บาท/ท่าน/ห้อง ต่อคืน รวมอาหารเช้า
+                    เตียงเด็กสำหรับเด็กอายุต่ำกว่า 2 ปี ให้บริการฟรีและต้องแจ้งความประสงค์ 
+                    แขกของ Veranda Resort & Villas Hua Hin Cha Am สามารถใช้บริการสถานีชาร์จรถยนต์ไฟฟ้าได้ โดยสถานีชาร์จเหล่านี้รับบัตรเครดิตและ Google Pay
+                </p>
+            </div>
+        </div>
+    </footer>
+    <div class="policies">
+        <p>© 2024 Luxury Hotel. สงวนลิขสิทธิ์. | <a href="#">ข้อกำหนดและเงื่อนไข</a> | <a href="#">นโยบายความเป็นส่วนตัว</a></p>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollToPlugin.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+
+// Register GSAP plugins
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
+// DOM elements
+const header = document.querySelector('header');
+const logo = document.querySelector('.logo');
+const navWrapper = document.querySelector('.nav-wrapper');
+const toggle = document.getElementById("toggle");
+const fullMenu = document.querySelector('.full-menu');
+let isMenuOpen = false;
+
+// Navbar toggle functionality
+toggle.onclick = function() {
+    if (isMenuOpen) {
+        closeNavbar();
+    } else {
+        openNavbar();
+    }
+    isMenuOpen = !isMenuOpen;
+    this.classList.toggle("active");
+};
+
+function openNavbar() {
+    fullMenu.classList.add('active');
+    gsap.to(fullMenu, { autoAlpha: 1, duration: 0.5, ease: "power2.out" });
+    gsap.fromTo(
+        ".full-menu ul li", 
+        { y: 20, opacity: 0 }, 
+        { y: 0, opacity: 1, stagger: 0.1, duration: 0.3, ease: "power2.out" }
+    );
+    toggle.style.position = 'fixed'; // Ensure the button stays on top
+}
+
+function closeNavbar() {
+    gsap.to(".full-menu ul li", { y: 20, opacity: 0, stagger: 0.05, duration: 0.3, ease: "power2.in" });
+    gsap.to(fullMenu, { 
+        autoAlpha: 0, 
+        duration: 0.5, 
+        ease: "power2.in",
+        onComplete: () => {
+            fullMenu.classList.remove('active');
+            toggle.style.position = 'fixed'; // Reset button position if needed
+        }
+    });
+}
+
+// Scroll effects
+const tl = gsap.timeline({
+    scrollTrigger: {
+        trigger: document.body,
+        start: 'top top',
+        end: '100 top',
+        scrub: 1
+    }
+});
+
+tl.to(header, {
+    height: '64px',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    padding: '0 5%',
+    duration: 1,
+    ease: 'power2.inOut'
+})
+.to('.Hotel-Title', {
+    fontSize: '2rem',
+    duration: 1,
+    ease: 'power2.inOut'
+}, '<')
+.to(logo, {
+    fontSize: '2rem',
+    marginBottom: 0,
+    duration: 1,
+    ease: 'power2.inOut'
+}, '<')
+.to('.logo-icon', {
+    width: '30px',
+    height: '30px',
+    marginRight: '10px',
+    duration: 1,
+    ease: 'power2.inOut'
+}, '<')
+.to(navWrapper, {
+    display: 'flex',
+    opacity: 1,
+    duration: 1,
+    ease: 'power2.inOut'
+}, '>');
+
+// Image slider functionality
+const slides = document.querySelectorAll('.slide');
+let currentSlide = 0;
+
+function showNextSlide() {
+    slides[currentSlide].classList.remove('active');
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].classList.add('active');
+    document.querySelector('.hero-slider').style.transform = `translateX(-${currentSlide * 100}%)`;
+}
+
+setInterval(showNextSlide, 4000); // Change image every 4 seconds
+
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+// Initialize map
+document.addEventListener('DOMContentLoaded', function() {
+    var map = L.map('map').setView([12.7448259, 99.9673586], 15);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    var customIcon = L.icon({
+        iconUrl: './assets/hotel-svgrepo-com.svg',
+        className: "svg-icon",
+        iconSize: [38, 95],
+        iconAnchor: [22, 94],
+        popupAnchor: [-3, -76]
+    });
+
+    L.marker([12.7448259, 99.9673586], {icon: customIcon}).addTo(map)
+        .bindPopup("Alluring Hotel<br>ยินดีต้อนรับ!")
+        .openPopup();
+});
+
+// Resize event handler
+window.onresize = () => {
+    if (isMenuOpen) {
+        gsap.to("#bg-circle", 1, { scale: getVpdr(), ease: "expo.inOut" });
+    }
+};
+
+// Helper function to get viewport dimension ratio
+function getVpdr() {
+    var vph = $(window).height();
+    var vpw = $(window).width();
+    var vpd = Math.sqrt(vph * vph + vpw * vpw);
+    var vpdr = vpd / 100;
+    return vpdr;
+}
+    </script>
+</body>
+</html>
